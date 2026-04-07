@@ -21,3 +21,4 @@ frontend/dist/
 
 # Database
 *.db
+.vercel
