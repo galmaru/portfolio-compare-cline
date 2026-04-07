@@ -1,0 +1,417 @@
+/* 앱 전체 스타일 */
+.app {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 컨트롤 버튼 */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* 버튼 스타일 */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-success {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-danger {
+  background: #f56565;
+  color: white;
+}
+
+.btn-secondary {
+  background: #a0aec0;
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+}
+
+/* 포트폴리오 목록 */
+.portfolio-list {
+  margin-bottom: 2rem;
+}
+
+.portfolio-list h2 {
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+}
+
+.portfolio-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card.selected {
+  border-color: #667eea;
+  background: #f7fafc;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  flex: 1;
+  color: #2d3748;
+}
+
+.card-body p {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.item-tag {
+  background: #edf2f7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+/* 폼 컨테이너 */
+.form-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input:disabled {
+  background: #edf2f7;
+  cursor: not-allowed;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* 검색 결과 */
+.search-results {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.search-item:hover {
+  background: #f7fafc;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.stock-code {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 80px;
+}
+
+.stock-name {
+  flex: 1;
+  color: #2d3748;
+}
+
+.stock-type {
+  background: #edf2f7;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+/* 추가된 종목 목록 */
+.items-list {
+  margin-top: 1.5rem;
+}
+
+.items-list h3 {
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #2d3748;
+  margin-right: 0.5rem;
+}
+
+.item-code {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.item-ratio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item-ratio input {
+  width: 80px;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.ratio-summary {
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.ratio-summary.valid {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.ratio-summary.invalid {
+  background: #fed7d7;
+  color: #9b2c2c;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* 비교 결과 */
+.comparison-result {
+  margin-top: 2rem;
+}
+
+.comparison-result h2 {
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid;
+}
+
+.summary-card h3 {
+  margin-bottom: 1rem;
+}
+
+.summary-card p {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.positive {
+  color: #48bb78 !important;
+  font-weight: 600;
+}
+
+.negative {
+  color: #f56565 !important;
+  font-weight: 600;
+}
+
+/* 차트 */
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.chart-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chart-toggle {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-toggle.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.loading {
+  color: #718096;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+}
